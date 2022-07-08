@@ -15,5 +15,5 @@ func main() {
 
     week = append(week[:1], append(workdays, week[len(week)-1])...)
     fmt.Println("holidays - ", week)
-
+    
 }
