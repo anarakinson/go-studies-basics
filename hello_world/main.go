@@ -4,13 +4,15 @@ import (
     "fmt"
 )
 
+type AmericanVelocity float64
+type EuropeanVelocity float64
+
 func main() {
-    var AmericanVelocity, EuropeanVelocity float64
     var speed float64 = 120.4 // m/sec
-    EuropeanVelocity = (speed / 1000) * 3600
-    AmericanVelocity = (speed / 1609) * 3600
-    
+    european := EuropeanVelocity((speed / 1000) * 3600)
+    american := AmericanVelocity((speed / 1609) * 3600)
+
     fmt.Println(fmt.Sprintf("%.2f m/s", speed))
-    fmt.Println(fmt.Sprintf("%.2f km/h", EuropeanVelocity))
-    fmt.Println(fmt.Sprintf("%.2f mph", AmericanVelocity))
+    fmt.Println(fmt.Sprintf("%.2f km/h", european))
+    fmt.Println(fmt.Sprintf("%.2f mph", american))
 }
