@@ -48,7 +48,7 @@ func writeFile(data []byte, filepath string) {
 }
 
 func main() {
-    path := "./test.txt"
+    path := "../test.txt"
     data := getFile(path)
     fmt.Println(string(data))
     writeFile(data, "out.txt")
